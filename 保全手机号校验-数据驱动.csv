@@ -1,0 +1,9 @@
+caseName,mockScene,customerNo,policyNo,newPhone,expectCode,expectMsg
+正常号码-可用,,C100000001,P2020000001,13800005678,0000,success
+号码不足11位,phone-format-invalid,C100000001,P2020000001,1380000567,BIZ0003,手机号格式不合法
+号码超过11位,phone-format-invalid,C100000001,P2020000001,138000056789,BIZ0003,手机号格式不合法
+首位非1,phone-format-invalid,C100000001,P2020000001,23800005678,BIZ0003,手机号格式不合法
+次位非3-9,phone-format-invalid,C100000001,P2020000001,10800005678,BIZ0003,手机号格式不合法
+含非数字字符,phone-format-invalid,C100000001,P2020000001,1380000567a,BIZ0003,手机号格式不合法
+号码为空,phone-format-invalid,C100000001,P2020000001,,BIZ0003,手机号格式不合法
+号码已被占用,sms-phone-dup,C100000001,P2020000002,13800002222,BIZ0002,该手机号已被其他客户保单使用
